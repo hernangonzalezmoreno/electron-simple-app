@@ -1,0 +1,22 @@
+{
+  "name": "electron-simple-app",
+  "version": "1.0.0",
+  "description": "Una simple prueba de Electron",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hernangonzalezmoreno/electron-simple-app.git"
+  },
+  "author": "Hernán González Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hernangonzalezmoreno/electron-simple-app/issues"
+  },
+  "homepage": "https://github.com/hernangonzalezmoreno/electron-simple-app#readme",
+  "devDependencies": {
+    "electron": "^13.1.2"
+  }
+}
