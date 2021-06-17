@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hernangonzalezmoreno/electron-simple-app#readme",
   "devDependencies": {
-    "electron": "^13.1.2"
+    "electron": "^13.1.2",
+    "electron-reload": "^1.5.0"
   }
 }
