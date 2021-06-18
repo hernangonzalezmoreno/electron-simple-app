@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 const url = require('url');
+const templateMenu = require( './templateMenu.js' );
 
 // Modulo que recarga la app cuando hay cambios durante el desarrollo
 if( process.env.NODE_ENV !== 'production' ){
@@ -22,5 +23,8 @@ app.on( 'ready', () => {
       slashes: true
     })
   );
+
+  const mainMenu = Menu.buildFromTemplate( templateMenu );
+  Menu.setApplicationMenu( mainMenu );
 
 });
