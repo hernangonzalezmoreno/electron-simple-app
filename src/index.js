@@ -11,13 +11,16 @@ if( process.env.NODE_ENV !== 'production' ){
   });
 }
 
-// Guardamos de manera global una instancia de la ventana principal
-let mainWindow;
+// Guardamos de manera global una instancia de la ventana principal y de las secundarias
+var mainWindow;
+var newProductWindow = 1;
 
 // Cuando la app este lista creamos la ventana
 app.on( 'ready', () => {
 
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({
+    title: "Electron Simple App"
+  });
 
   mainWindow.loadURL(
     url.format({
@@ -31,3 +34,5 @@ app.on( 'ready', () => {
   Menu.setApplicationMenu( mainMenu );
 
 });
+
+module.exports = newProductWindow;
