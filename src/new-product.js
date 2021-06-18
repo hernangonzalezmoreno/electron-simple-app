@@ -28,9 +28,16 @@ module.exports = class NewProduct{
       slashes: true
     }));
 
+    // Evento al cerrar la ventana
+    this.window.on( 'closed', () => {
+      // Asignamos undefined a window para saber que la ventana esta cerrada
+      this.window = undefined;
+    });
+
   }
 
   cerrarVentana(){
+    // Disparamos el evento de cerrar la ventana
     this.window.close();
   }
 

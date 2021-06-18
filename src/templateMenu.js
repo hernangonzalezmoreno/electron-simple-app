@@ -12,15 +12,12 @@ const templateMenu = [
         accelerator: "Ctrl+N",
         click(){
 
-          // Consulto si hay una ventana abierta, en ese caso la cierro
-          if( newProductWindow.window ){
-            newProductWindow.cerrarVentana();
-            newProductWindow = null;
-          }
-          // Luego creo la ventana nueva
-          newProductWindow = new NewProduct();
+          // Solo creo la ventana si newProductWindow esta vacio, o no contiene la propiedad window, o la propiedad esta vacia
+          if( !newProductWindow || !('window' in newProductWindow) || !newProductWindow.window )
+            newProductWindow = new NewProduct();
 
           console.log( "Click en Nuevo Producto" );
+
         }
       }
     ]
