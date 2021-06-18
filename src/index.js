@@ -5,7 +5,10 @@ const templateMenu = require( './templateMenu.js' );
 
 // Modulo que recarga la app cuando hay cambios durante el desarrollo
 if( process.env.NODE_ENV !== 'production' ){
-  require( 'electron-reload' )( __dirname, {} );
+  require( 'electron-reload' )( __dirname, {
+    // Con lo siguiente, relanzamos la app cuando hay cambios propios de Electron
+    electron: path.join( __dirname, '../node_modules', '.bin', 'electron' )
+  });
 }
 
 // Guardamos de manera global una instancia de la ventana principal
