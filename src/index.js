@@ -33,6 +33,12 @@ app.on( 'ready', () => {
   const mainMenu = Menu.buildFromTemplate( templateMenu );
   Menu.setApplicationMenu( mainMenu );
 
+  // Evento al cerrar la ventana principal
+  mainWindow.on( 'closed', () => {
+    // Si la ventana principal se cierra, cerramos toda la app
+    app.quit();
+  });
+
 });
 
 module.exports = newProductWindow;
